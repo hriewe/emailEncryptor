@@ -9,6 +9,8 @@ def encrypt(string):
   for char in string: 
     if char == ' ':
       cipher = cipher + char
+    if char == '.' or char == ',' or char == '?' or char == '!' or char == '@':
+      cipher = cipher + char 
     elif  char.isupper():
       cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
     else:
@@ -61,6 +63,7 @@ def sendMail():
 	if again == 'yes' or again == 'Yes':
 		sendMail()
 	else:
+		print("Goodybye!")
 		sys.exit(0)
 
 
