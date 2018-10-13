@@ -10,7 +10,9 @@ def encrypt(string):
   for char in string: 
     if char == ' ':
       cipher = cipher + char
-    elif  char.isupper():
+    elif char == '.' or char == ',':
+      cipher = cipher + char
+    elif char.isupper():
       cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
     else:
       cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
@@ -24,6 +26,8 @@ def decrpyt(string, key):
   cipher = ''
   for char in string: 
     if char == ' ':
+      cipher = cipher + char
+    elif char == '.' or char == ',':
       cipher = cipher + char
     elif  char.isupper():
       cipher = cipher + chr((ord(char) - shift - 65) % 26 + 65)
