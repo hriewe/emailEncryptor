@@ -2,6 +2,7 @@ import yagmail
 import os
 import random
 import sys
+import string
 
 def encrypt(string):
   shift = random.randint(1,26)
@@ -9,8 +10,6 @@ def encrypt(string):
   for char in string: 
     if char == ' ':
       cipher = cipher + char
-    if char == '.' or char == ',' or char == '?' or char == '!' or char == '@':
-      cipher = cipher + char 
     elif  char.isupper():
       cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
     else:
@@ -37,7 +36,9 @@ def decodeMail():
 	key = input("Enter the key found at the end of your emailEncryptor message: ")
 	content = input("Paste the email contents here: ")
 	decodedContent = decrpyt(content, key)
+	print("\n")
 	print(decodedContent)
+	print("\n")
 
 	again = input("Decode another message? (yes/no) ")
 	if again == 'yes' or again == 'Yes':
