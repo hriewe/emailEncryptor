@@ -6,4 +6,5 @@ To do this:
 1. Navigate to your google account settings
 2. In the "Sign in and Security pane", click "Apps with account access"
 3. Set the "Allow less secure apps" slider to ON
+
 Thats it! You can now send mail through emailEncryptor
