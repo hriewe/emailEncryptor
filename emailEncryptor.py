@@ -5,7 +5,7 @@ import sys
 import string
 
 def encrypt(string):
-  shift = random.randint(1,26)
+  shift = random.randint(1,25)
   cipher = ''
   for char in string: 
     if char == ' ':
