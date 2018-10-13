@@ -10,6 +10,7 @@ To do this:
 If you dont have python installed, you can get it [Here](https://www.python.org/downloads/)
 
 Install the needed module with:
-'pip install yagmail'
+
+`pip install yagmail`
 
 Thats it! You can now send mail through emailEncryptor
