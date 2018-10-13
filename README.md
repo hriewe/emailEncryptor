@@ -1,7 +1,7 @@
 # emailEncryptor
 A simple program to send encrypted emails and decode encrypted emails
 # Set up
-In order to send mail through gmail, you will have to enable "Enable less secure apps"
+In order to send mail through gmail, you will have to "Enable less secure apps"
 To do this:
 1. Navigate to your google account settings
 2. In the "Sign in and Security pane", click "Apps with account access"
