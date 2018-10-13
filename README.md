@@ -1,6 +1,6 @@
 # emailEncryptor
 A simple program to send encrypted emails and decode encrypted emails
-# Set up
+## Set up
 In order to send mail through gmail, you will have to "Enable less secure apps"
 To do this:
 1. Navigate to your google account settings
@@ -14,3 +14,21 @@ Install the needed module with:
 `pip install yagmail`
 
 Thats it! You can now send mail through emailEncryptor
+
+## How to run the program
+
+Run this command on your command line:
+
+`git clone https://github.com/hriewe/emailEncryptor.git`
+
+CD into the emailEncryptor folder:
+
+`cd emailEncryptor/`
+
+Run the program with:
+
+`python emailEncryptor.py`
+
+If you have multiple different versions of python installed on your machine, you might need to run:
+
+`python3 emailEncryptor.py`
