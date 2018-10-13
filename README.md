@@ -1,5 +1,11 @@
 # emailEncryptor
-A simple program to send encrypted emails and decode encrypted emails
+A simple program to send encrypted emails and decode encrypted emails.
+Currently, it uses a Caesar Cipher to encrypt your message. This is a well known method of
+encryption that is not hard to crack if someone really wants to. In the future, better forms
+of encryption will be implemented.
+Anybody who sees these encrypted messages will see a bunch of giberish, and this will be uncrackable
+to most.
+
 ## Set up
 In order to send mail through gmail, you will have to "Enable less secure apps"
 To do this:
@@ -11,7 +17,7 @@ If you dont have python installed, you can get it [Here](https://www.python.org/
 
 Install the needed module with:
 
-`pip install yagmail`
+`pip3 install yagmail`
 
 Thats it! You can now send mail through emailEncryptor
 
@@ -32,3 +38,7 @@ Run the program with:
 If you have multiple different versions of python installed on your machine, you might need to run:
 
 `python3 emailEncryptor.py`
+
+## Notes
+This program will ask you for your gmail username and password. These are not stored anywhere, but if
+you do not feel safe, do not enter your information.
