@@ -18,8 +18,31 @@ def encrypt(string):
   cipher += str(shift)
   return cipher
 
-def decodeMail():
+def decrpyt(string, key):
+  shift = int(key)
+  cipher = ''
+  for char in string: 
+    if char == ' ':
+      cipher = cipher + char
+    elif  char.isupper():
+      cipher = cipher + chr((ord(char) - shift - 65) % 26 + 65)
+    else:
+      cipher = cipher + chr((ord(char) - shift - 97) % 26 + 97)
 
+  return cipher
+
+def decodeMail():
+	key = input("Enter the key found at the end of your emailEncryptor message: ")
+	content = input("Paste the email contents here: ")
+	decodedContent = decrpyt(content, key)
+	print(decodedContent)
+
+	again = input("Decode another message? (yes/no) ")
+	if again == 'yes' or again == 'Yes':
+		decodeMail()
+	else:
+		print("Goodybye!")
+		sys.exit(0)
 
 def sendMail():
 	usrEmail = input("Great! What is your e-mail address? ")
@@ -48,5 +71,5 @@ decision = input("Would you like to send, or decode mail? ")
 if decision == "send":
 	sendMail()
 
-if decision == 'decode'
+if decision == "decode":
 	decodeMail()
