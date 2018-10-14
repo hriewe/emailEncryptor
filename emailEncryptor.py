@@ -3,6 +3,7 @@ import os
 import random
 import sys
 import string
+import getpass
 
 def encrypt(string):
   shift = random.randint(1,25)
@@ -53,7 +54,7 @@ def decodeMail():
 
 def sendMail():
 	usrEmail = input("Great! What is your e-mail address? ")
-	usrPass = input("What is your password? ")
+	usrPass = getpass.getpass(prompt = "What is your password: ")
 	yag = yagmail.SMTP(usrEmail, usrPass)
 	content = input("Please enter the body of the e-mail: ")
 	cryptContent = encrypt(content)
@@ -73,11 +74,14 @@ def sendMail():
 
 
 print("\nWelcome to emailEncryptor!\n")
-print(" Writen by Hayden Riewe  \n")
-decision = input("Would you like to send, or decode mail? ")
+print("Writen by Hayden Riewe  \n")
+while True:
+	decision = input("Would you like to send, or decode mail? ")
 
-if decision == "send":
-	sendMail()
+	if decision == "send" or decision == "Send":
+		sendMail()
+		break
 
-if decision == "decode":
-	decodeMail()
+	if decision == "decode" or decision == "Decode":
+		decodeMail()
+		break
