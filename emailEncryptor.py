@@ -36,6 +36,21 @@ def decrpyt(string, key):
       cipher = cipher + chr((ord(char) - shift - 97) % 26 + 97)
 
   return cipher
+	
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        pass
+ 
+    try:
+        import unicodedata
+        unicodedata.numeric(s)
+        return True
+    except (TypeError, ValueError):
+        pass
+    return False
 
 def decodeMail():
 	key = input("Enter the key found at the end of your emailEncryptor message: ")
