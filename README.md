@@ -65,4 +65,6 @@ able to access your account in order to send mail for you)
 
 * I am currently working on a version which uses a GUI for input, and also the hashlib library for extra security
 
+* The program currently does not have support for numbers :/ I am working on a fix asap and should have it up soon.
+
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
