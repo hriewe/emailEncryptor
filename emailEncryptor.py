@@ -100,11 +100,23 @@ def is_number(s):
         pass
     return False
 
+# define our clear function 
+def clear(): 
+  
+    # for windows 
+    if name == 'nt': 
+        _ = os.system('cls') 
+  
+    # for mac and linux
+    else: 
+        _ = os.system('clear') 
+
 # Get encoded message and decrypt it based on key
 def decodeMail():
 	key = input("Enter the key found at the end of your emailEncryptor message: ")
 	content = input("Paste the email contents here: ")
 	decodedContent = decrpyt(content, key)
+	clear()
 	print("\n")
 	print(decodedContent)
 	print("\n")
