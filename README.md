@@ -13,7 +13,7 @@ I suggest creating a new Gmail account with a VERY strong password, and using th
 recieving messages with emailEncryptor.
 
 In order to send mail through Gmail, you will have to "enable less secure apps"
-To do this:
+To do this, click [Here](https://www.google.com/settings/security/lesssecureapps) or follow these steps:
 1. Navigate to your Google account settings
 2. In the "Sign in and Security pane", click "Apps with account access"
 3. Set the "Allow less secure apps" slider to ON
