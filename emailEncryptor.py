@@ -5,6 +5,7 @@ import sys
 import string
 import getpass
 
+# Encrypt the string and return it
 def encrypt(string):
   shift = random.randint(1,25)
   cipher = ''
@@ -13,6 +14,8 @@ def encrypt(string):
       cipher = cipher + char
     elif char == '.' or char == ',':
       cipher = cipher + char
+    elif is_number(char):
+      cipher = cipher + encryptNumber(char)
     elif char.isupper():
       cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
     else:
@@ -22,6 +25,30 @@ def encrypt(string):
   cipher += str(shift)
   return cipher
 
+# If there is a number in the string, it is sent here for a special encoding (WORK IN PROGRESS)
+def encryptNumber(char):
+  if char == '0':
+    return '['
+  elif char == '1':
+    return '}'
+  elif char == '2':
+    return '|'
+  elif char == '3':
+    return '&'
+  elif char == '4':
+    return '*'
+  elif char == '5':
+    return '#'
+  elif char == '6':
+    return '>'
+  elif char == '7':
+    return '-'
+  elif char == '8':
+    return '%'
+  else:
+    return '~'
+
+# Decrypt the string (WORK IN PROGRESS)
 def decrpyt(string, key):
   shift = int(key)
   cipher = ''
@@ -30,13 +57,34 @@ def decrpyt(string, key):
       cipher = cipher + char
     elif char == '.' or char == ',':
       cipher = cipher + char
+    elif char == '[':
+      cipher = cipher + '0'
+    elif char == '}':
+      cipher = cipher + '1'
+    elif char == '|':
+      cipher = cipher + '2'
+    elif char == '&':
+      cipher = cipher + '3'
+    elif char == '*':
+      cipher = cipher + '4'
+    elif char == '#':
+      cipher = cipher + '5'
+    elif char == '>':
+      cipher = cipher + '6'
+    elif char == '-':
+      cipher = cipher + '7'
+    elif char == '%':
+      cipher = cipher + '8'
+    elif char == '~':
+      cipher = cipher + '9'
     elif  char.isupper():
       cipher = cipher + chr((ord(char) - shift - 65) % 26 + 65)
     else:
       cipher = cipher + chr((ord(char) - shift - 97) % 26 + 97)
 
   return cipher
-	
+
+# Determine if a character in the body is actually a number
 def is_number(s):
     try:
         float(s)
@@ -52,6 +100,7 @@ def is_number(s):
         pass
     return False
 
+# Get encoded message and decrypt it based on key
 def decodeMail():
 	key = input("Enter the key found at the end of your emailEncryptor message: ")
 	content = input("Paste the email contents here: ")
@@ -67,6 +116,7 @@ def decodeMail():
 		print("Goodybye!")
 		sys.exit(0)
 
+# Encrypt a message and send an email
 def sendMail():
 	usrEmail = input("Great! What is your e-mail address? ")
 	usrPass = getpass.getpass(prompt = "What is your password: ")
@@ -87,7 +137,7 @@ def sendMail():
 		print("Goodybye!")
 		sys.exit(0)
 
-
+# This is the start of the main function, user determines if they want to encode or decode
 print("\nWelcome to emailEncryptor!\n")
 print("Writen by Hayden Riewe  \n")
 while True:
