@@ -1,4 +1,4 @@
-# emailEncryptor (version 0.2)
+# emailEncryptor (version 0.3)
 A simple program to send encrypted emails and decode encrypted emails.
 Currently, it uses a Caesar Cipher to encrypt your message. This is a well known method of
 encryption that is not hard to crack if someone really knows how. In the future, better forms
@@ -65,6 +65,6 @@ able to access your account in order to send mail for you)
 
 * I am currently working on a version which uses a GUI for input, and also the hashlib library for extra security
 
-* The program currently does not have support for numbers :/ I am working on a fix asap and should have it up soon.
+* The program now supports encryption of numbers! The code for this is not pretty and I am working on cleaning it up, but for now it works.
 
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
