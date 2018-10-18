@@ -1,4 +1,4 @@
-# emailEncryptor (version 0.3)
+# emailEncryptor (version 0.4)
 A simple program to send encrypted emails and decode encrypted emails.
 Currently, it uses a Caesar Cipher to encrypt your message. This is a well known method of
 encryption that is not hard to crack if someone really knows how. In the future, better forms
@@ -73,3 +73,6 @@ able to access your account in order to send mail for you)
 * More secure forms of encryption / choose from multiple different ciphers
 
 * Image support! (Distorting images to the point where no one can tell what they were)
+
+### Update Notes
+* emailEncryptor now takes the encrypted string and reverses it before it sends the email. This adds another layer to the encryption and makes it a little harder to crack.
