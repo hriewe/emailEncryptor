@@ -9,7 +9,7 @@ to most.
 ## Set up
 If you are trying to send encrypted messages, I do not suggest using your primary email account.
 You can, and it will work, but you will need to alter some settings for the program to work.
-I suggest creating a new Gmail account with a VERY strong password, and using that for sending and
+I suggest creating a new Gmail account with a strong password, and using that for sending and
 recieving messages with emailEncryptor.
 
 In order to send mail through Gmail, you will have to "enable less secure apps"
@@ -63,8 +63,13 @@ the message without my program. Spread the word and try it out with your friends
 you do not feel safe, do not enter your information. (There is no practicle way around this, as yagmail needs to be
 able to access your account in order to send mail for you)
 
-* I am currently working on a version which uses a GUI for input, and also the hashlib library for extra security
-
 * The program now supports encryption of numbers! The code for this is not pretty and I am working on cleaning it up, but for now it works.
 
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
+
+## Coming Soon
+* GUI
+
+* More secure forms of encryption / choose from multiple different ciphers
+
+* Image support! (Distorting images to the point where no one can tell what they were)
