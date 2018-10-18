@@ -21,6 +21,7 @@ def encrypt(string):
     else:
       cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
 
+  cipher = cipher[::-1]
   cipher += ' '
   cipher += str(shift)
   return cipher
@@ -52,6 +53,7 @@ def encryptNumber(char):
 def decrpyt(string, key):
   shift = int(key)
   cipher = ''
+  string = string[::-1]
   for char in string: 
     if char == ' ':
       cipher = cipher + char
