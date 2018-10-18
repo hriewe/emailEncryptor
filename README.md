@@ -9,7 +9,7 @@ to most.
 ## Set up
 If you are trying to send encrypted messages, I do not suggest using your primary email account.
 You can, and it will work, but you will need to alter some settings for the program to work.
-I suggest creating a new Gmail account with a VERY strong password, and using that for sending and
+I suggest creating a new Gmail account with a strong password, and using that for sending and
 recieving messages with emailEncryptor.
 
 In order to send mail through Gmail, you will have to "enable less secure apps"
