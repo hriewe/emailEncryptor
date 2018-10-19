@@ -72,7 +72,7 @@ able to access your account in order to send mail for you)
 
 * More secure forms of encryption / choose from multiple different ciphers
 
-* Image support! (Distorting images to the point where no one can tell what they were)
+* Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
 
 ### Update Notes
 * emailEncryptor now takes the encrypted string and reverses it before it sends the email. This adds another layer to the encryption and makes it a little harder to crack.
