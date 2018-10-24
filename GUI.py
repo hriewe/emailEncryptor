@@ -14,6 +14,7 @@ import getpass
 # For windows
 # sg.ChangeLookAndFeel('dark')
 
+# This funciton will encrypt numbers with a special character
 def encryptNumber(char):
   if char == '0':
     return '['
@@ -36,6 +37,7 @@ def encryptNumber(char):
   else:
     return '~'
 
+# Determine if a char is a number or not
 def is_number(s):
     try:
         float(s)
@@ -51,6 +53,7 @@ def is_number(s):
         pass
     return False
 
+# Encrypt the users string and return the new one
 def encrypt(string):
   shift = random.randint(1,25)
   cipher = ''
@@ -73,6 +76,7 @@ def encrypt(string):
   cipher += str(shift)
   return cipher
 
+# Decrypt the string based on the key
 def decrpyt(string, key):
   shift = int(key)
   cipher = ''
@@ -111,8 +115,10 @@ def decrpyt(string, key):
 
   return cipher
 
+#What the user sees when they choose to send mail
 def sendMailButton():
 
+  # Design the layout of the interface the user sees when sending mail
 	layout = [
           [sg.Text('Please enter your information', auto_size_text=False, justification='left', font=('Helvetica', 20))],
           [sg.Text('Your E-Mail address', size=(20, 1)), sg.InputText()],
@@ -124,9 +130,10 @@ def sendMailButton():
           sg.Button('Home',font=('Helvetica',15), auto_size_button=True), 
           sg.ReadButton('Exit',font=('Helvetica',15), auto_size_button=True)]
          ]
-
+  # Show the window to the user
 	window = sg.Window('emailEncryptor').Layout(layout)
 
+  # Send the mail
 	while True:
 		button, values = window.Read()
 		if button == 'Send':
@@ -139,17 +146,20 @@ def sendMailButton():
 		else:
 			sys.exit()
 
+#What thet user sees when they choose to decode mail
 def decodeMailButton():
 
+  # Design the layout of the interface when the user is entering decode info
 	layout = [
 			[sg.Text('Enter the key found at the end of your emailEncryptor message'), sg.InputText(do_not_clear=True, size=(10,1))],
 			[sg.Text('Paste the contents of the emailEncryptor message here'), sg.InputText(do_not_clear=True, size=(15,2))],
 			[sg.ReadButton('Decode',font=('Helvetica',15), auto_size_button=True, bind_return_key=True), 
 			sg.Button('Home',font=('Helvetica',15), auto_size_button=True), sg.Exit(font=('Helvetica',15), auto_size_button=True)]
 			]
-
+  # Show the window to the user
 	window = sg.Window('emailEncryptor').Layout(layout)
 
+  # Determine what to do with the data just given to us
 	while True:
 		button, values = window.Read()
 		if button == 'Decode':
@@ -163,14 +173,17 @@ def decodeMailButton():
 			home()
 		else:
 			sys.exit()
+
+# Initial screen and home location
 def home():
 
-
+  # Set custom, system wide options to the entire interface
 	sg.SetOptions(scrollbar_color=None,
            button_color=('white','#475841'),
            font=('Helvetica', 20),     
            input_elements_background_color='#F7F3EC') 
 
+  # Design the layout of the home window
 	layout = [[sg.Text('Welcome to emailEncryptor', auto_size_text=False, justification='center', font=('Helvetica', 20))],
 			  [sg.Text('')],
 			  [sg.Text('Written by Hayden Riewe', auto_size_text=False, justification='center', font=('Helvetica', 20))],
@@ -193,4 +206,6 @@ def home():
 	        decodeMailButton()
 	  elif button =='Quit' or button is None:
 	    break
+
+# Function call to start the program
 home()
