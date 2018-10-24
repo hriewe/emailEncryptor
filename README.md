@@ -1,4 +1,5 @@
-# emailEncryptor (version 0.5)
+# UPDATE (ADDED GUI VERSION)
+# emailEncryptor (version 1.0)
 A simple program to send encrypted emails and decode encrypted emails.
 Currently, it uses a Caesar Cipher to encrypt your message. This is a well known method of
 encryption that is not hard to crack if someone really knows how. In the future, better forms
@@ -31,7 +32,7 @@ Install the needed module with:
 
 Thats it! You can now send mail through emailEncryptor
 
-## How to run the program
+## How to run the program (ON COMMAND LINE)
 
 Run this command on your command line to install the program:
 
@@ -54,6 +55,23 @@ your specific version number when you run the program. For me, I have yagmail in
 
 `python3.6 emailEncryptor.py`
 
+## How to run the program (WITH GUI)
+Download the needed modules with:
+
+`pip3 install yagmail`
+`pip3 install pysimplegui`
+
+Run this command on your command line to install the program:
+
+`git clone https://github.com/hriewe/emailEncryptor.git`
+
+CD into the emailEncryptor folder:
+
+`cd emailEncryptor/`
+
+Run the program with:
+
+`python3 GUI.py`
 ## Notes
 * This program is intended to be used by two people to send and decode encrypted messages. When using the program, you can
 send mail to anybody without them having to change any setting in their email accounts, but they will not be able to decode
@@ -68,11 +86,13 @@ able to access your account in order to send mail for you)
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
 
 ## Coming Soon
-* GUI
+* GUI (JUST ADDED!)
 
 * More secure forms of encryption / choose from multiple different ciphers
 
 * Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
 
 ### Update Notes
+* BIG NEWS: emailEncryptor now runs with a user friendly GUI. The version here is optimized to run on a Mac machine, but it will work for any. Windows version coming real soon, then Linux. If you find a bug with the program on your machine, please let me know so I can fix any problems.
+
 * emailEncryptor now takes the encrypted string and reverses it before it sends the email. This adds another layer to the encryption and makes it a little harder to crack.
