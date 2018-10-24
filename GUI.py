@@ -39,23 +39,23 @@ def encryptNumber(char):
 
 # Determine if a char is a number or not
 def is_number(s):
-    try:
-        float(s)
-        return True
-    except ValueError:
-        pass
- 
-    try:
-        import unicodedata
-        unicodedata.numeric(s)
-        return True
-    except (TypeError, ValueError):
-        pass
-    return False
+  try:
+      float(s)
+      return True
+  except ValueError:
+      pass
+
+  try:
+      import unicodedata
+      unicodedata.numeric(s)
+      return True
+  except (TypeError, ValueError):
+      pass
+  return False
 
 # Encrypt the users string and return the new one
 def encrypt(string):
-  shift = random.randint(1,25)
+  shift = random.randint(5,25)
   cipher = ''
   for char in string: 
     if char == ' ':
@@ -117,7 +117,6 @@ def decrpyt(string, key):
 
 #What the user sees when they choose to send mail
 def sendMailButton():
-
   # Design the layout of the interface the user sees when sending mail
 	layout = [
           [sg.Text('Please enter your information', auto_size_text=False, justification='left', font=('Helvetica', 20))],
