@@ -26,13 +26,31 @@ NOTE: Gmail WILL send you a critical security alert email. You can ignore this.
 You will need python.
 If you dont have python installed, you can get it [Here](https://www.python.org/downloads/)
 
+Thats it! You can now send mail through emailEncryptor
+
+## How to run the program (WITH GUI)
+Download the needed modules with:
+
+`pip3 install yagmail`
+`pip3 install pysimplegui`
+
+Run this command on your command line to install the program:
+
+`git clone https://github.com/hriewe/emailEncryptor.git`
+
+CD into the emailEncryptor folder:
+
+`cd emailEncryptor/`
+
+Run the program with:
+
+`python3 GUI.py`
+
+## How to run the program (ON COMMAND LINE)
+
 Install the needed module with:
 
 `pip3 install yagmail`
-
-Thats it! You can now send mail through emailEncryptor
-
-## How to run the program (ON COMMAND LINE)
 
 Run this command on your command line to install the program:
 
@@ -55,23 +73,6 @@ your specific version number when you run the program. For me, I have yagmail in
 
 `python3.6 emailEncryptor.py`
 
-## How to run the program (WITH GUI)
-Download the needed modules with:
-
-`pip3 install yagmail`
-`pip3 install pysimplegui`
-
-Run this command on your command line to install the program:
-
-`git clone https://github.com/hriewe/emailEncryptor.git`
-
-CD into the emailEncryptor folder:
-
-`cd emailEncryptor/`
-
-Run the program with:
-
-`python3 GUI.py`
 ## Notes
 * This program is intended to be used by two people to send and decode encrypted messages. When using the program, you can
 send mail to anybody without them having to change any setting in their email accounts, but they will not be able to decode
