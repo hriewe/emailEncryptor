@@ -87,8 +87,6 @@ able to access your account in order to send mail for you)
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
 
 ## Coming Soon
-* GUI (JUST ADDED!)
-
 * More secure forms of encryption / choose from multiple different ciphers
 
 * Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
