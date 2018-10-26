@@ -24,7 +24,7 @@ Also, the program will not work if you have "2 step verification" enabled on you
 NOTE: Gmail WILL send you a critical security alert email. You can ignore this.
 
 You will need python.
-If you dont have python installed, you can get it<a href="https://www.python.org/downloads/" target="_blank">here</a>
+If you dont have python installed, you can get it [here](https://www.python.org/downloads/)
 
 Thats it! You can now send mail through emailEncryptor
 
