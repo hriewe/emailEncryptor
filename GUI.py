@@ -11,8 +11,8 @@ import sys
 import string
 import getpass
 
-# For windows
-# sg.ChangeLookAndFeel('dark')
+# For windows (uncomment if using Windows machine)
+# sg.ChangeLookAndFeel('BlueMono')
 
 # This funciton will encrypt numbers with a special character
 def encryptNumber(char):
