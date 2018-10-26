@@ -55,7 +55,7 @@ def is_number(s):
 
 # Encrypt the users string and return the new one
 def encrypt(string):
-  shift = random.randint(5,25)
+  shift = random.randint(5,100)
   cipher = ''
   for char in string: 
     if char == ' ':
