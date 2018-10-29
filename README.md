@@ -4,7 +4,7 @@ A simple program to encode and decode email.
 Currently, it uses a Caesar Cipher + my own little twist to encrypt your message. In the future, better forms
 of encryption will be implemented.
 Anybody who sees these encrypted messages will see a bunch of giberish, and this will be uncrackable
-to most. The encryption is done by the program so your original message is NEVER transported over the network. This makes it secure from Man in the Middle attacks, and network sniffing.
+to most. The encryption is done by the program so your original message is NEVER transported over the network. This makes it secure from Man in the Middle attacks and network sniffing.
 
 ## Set up
 If you are trying to send encrypted messages, I do not suggest using your primary email account.
