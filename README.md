@@ -1,8 +1,7 @@
 # UPDATE (ADDED GUI VERSION)
 # emailEncryptor (version 1.0)
-A simple program to send encrypted emails and decode encrypted emails.
-Currently, it uses a Caesar Cipher to encrypt your message. This is a well known method of
-encryption that is not hard to crack if someone really knows how. In the future, better forms
+A simple program to encode and decode email.
+Currently, it uses a Caesar Cipher + my own little twist to encrypt your message. In the future, better forms
 of encryption will be implemented.
 Anybody who sees these encrypted messages will see a bunch of giberish, and this will be uncrackable
 to most.
@@ -32,6 +31,7 @@ Thats it! You can now send mail through emailEncryptor
 Download the needed modules with:
 
 `pip3 install yagmail`
+
 `pip3 install pysimplegui`
 
 Run this command on your command line to install the program:
