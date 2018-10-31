@@ -86,6 +86,10 @@ able to access your account in order to send mail for you)
 
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
 
+* [Yagmail Documentation](https://media.readthedocs.org/pdf/yagmail/latest/yagmail.pdf)
+
+* [PySimpleGUI Documentation](https://pysimplegui.readthedocs.io/)
+
 ## Coming Soon
 * More secure forms of encryption / choose from multiple different ciphers
 
