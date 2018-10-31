@@ -1,4 +1,3 @@
-# UPDATE (ADDED GUI VERSION)
 # emailEncryptor (version 1.0)
 A simple program to encode and decode email.
 Currently, it uses a Caesar Cipher + my own little twist to encrypt your message. In the future, better forms
