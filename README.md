@@ -1,7 +1,9 @@
 # emailEncryptor (v 1.0)
 
-![](img/home.png "Home Screen of program")
-![](img/send.png "After user hits send")
+![](img/home.PNG "Home Screen of program")
+
+
+![](img/send.PNG "After user hits send")
 
 A simple program to encode and decode email.
 Currently, it uses a Caesar Cipher + my own little twist to encrypt your message. In the future, better forms
