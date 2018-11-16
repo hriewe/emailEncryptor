@@ -1,4 +1,4 @@
-# emailEncryptor (v 1.0)
+# emailEncryptor (v 1.5)
 
 ![](img/home.PNG "Home Screen of program")
 
@@ -101,6 +101,8 @@ able to access your account in order to send mail for you)
 * Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
 
 ### Update Notes
+* The newest version of emailEncryptor is set up and ready for the new ciphers. Those will be out very soon. The code was also completely reformated and cleaned up. The caesar cipher now works much better.
+
 * emailEncryptor now runs with a user friendly GUI. The version here is optimized to run on a Mac machine, but it will work for any. If you find a bug with the program on your machine, please let me know so I can fix any problems.
 
 * emailEncryptor now takes the encrypted string and reverses it before it sends the email. This adds another layer to the encryption and makes it a little harder to crack.
