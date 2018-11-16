@@ -96,7 +96,7 @@ able to access your account in order to send mail for you)
 * [PySimpleGUI Documentation](https://pysimplegui.readthedocs.io/)
 
 ## Coming Soon
-* More secure forms of encryption / choose from multiple different ciphers
+* Version 2 is in the works. The caesar cipher has been modified significantly and is now much more secure. Users will also be given the option to choose from 3 ciphers, including a new Vigenère and (hopefully) an Emoji cipher.
 
 * Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
 
