@@ -37,6 +37,7 @@ def sendMailButton():
         yag.send(values[2], values[3], encryptedContent)
         sg.Popup('Email sent succesfully!')
     elif button == 'Home':
+      window.Hide()
       home()
     else:
       sys.exit()
@@ -67,6 +68,7 @@ def decodeMailButton():
         window2 = sg.Window('Decoded message').Layout(layout2)
         button2 = window2.Read()
     elif button == 'Home':
+      window.Hide()
       home()
     else:
       sys.exit()
@@ -97,11 +99,13 @@ def home():
     button, value = window.Read()
     # Take appropriate action based on button
     if button == 'Send':
-          sendMailButton()
           window.Hide()
+          sendMailButton()
     elif button == 'Decode':
+          window.Hide()
           decodeMailButton()
     elif button =='Quit' or button is None:
+      sys.exit()
       break
 
 # Function call to start the program
