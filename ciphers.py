@@ -2,7 +2,9 @@
 # Written and designed by Hayden Riewe
 # hrcyber.tech
 # github.com/hriewe/
-
+import yagmail
+import sys
+import getpass
 import random
 import string
 
@@ -112,3 +114,40 @@ class caesar():
           return 'å'
       else:
           return 'ž'
+
+  # Get encoded message and decrypt it based on key
+  def CLIdecodeMail(self):
+    key = input("Enter the key found at the end of your emailEncryptor message: ")
+    content = input("Paste the email contents here: ")
+    decodedContent = self.decrpyt(content, key)
+    print("\n")
+    print(decodedContent)
+    print("\n")
+
+    again = input("Decode another message? (yes/no) ")
+    if again == 'yes' or again == 'Yes':
+      self.CLIdecodeMail()
+    else:
+      print("Goodybye!")
+      sys.exit(0)
+
+  # Encrypt a message and send an email
+  def CLIsendMail(self):
+    usrEmail = input("Great! What is your e-mail address? ")
+    usrPass = getpass.getpass(prompt = "What is your password: ")
+    yag = yagmail.SMTP(usrEmail, usrPass)
+    content = input("Please enter the body of the e-mail: ")
+    cryptContent = self.encrypt(content)
+
+    sendTo = input("Who do you want to send this to? ")
+    subject = input("Subject line? ")
+
+    yag.send(sendTo, subject, cryptContent)
+
+    print("Message sent successfully!!!")
+    again = input("Send another message? (yes/no) ")
+    if again == 'yes' or again == 'Yes':
+      self.CLIsendMail()
+    else:
+      print("Goodybye!")
+      sys.exit(0)
