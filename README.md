@@ -5,9 +5,8 @@
 
 ![](img/send.PNG "After user hits send")
 
-A simple program to encode and decode email.
-Currently, it uses a Caesar Cipher + my own little twist to encrypt your message. In the future, better forms
-of encryption will be implemented.
+A simple program to encode and decode Gmail messages.
+Currently, it uses my special implementation of a rotation cipher to encrypt your message.
 Anybody who sees these encrypted messages will see a bunch of giberish, and this will be uncrackable
 to most. The encryption is done by the program so your original message is NEVER transported over the network. This makes it secure from Man in the Middle attacks and network sniffing.
 
