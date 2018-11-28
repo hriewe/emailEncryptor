@@ -47,7 +47,6 @@ def decodeMailButton():
 
   # Design the layout of the interface when the user is entering decode info
   layout = [
-      [sg.Text('Enter the key found at the end of your emailEncryptor message'), sg.InputText(do_not_clear=True, size=(10,1))],
       [sg.Text('Paste the contents of the emailEncryptor message here'), sg.InputText(do_not_clear=True, size=(15,2))],
       [sg.Text('Please choose a cipher', size=(20,1)), sg.Radio('Caesar', "cipher", default=True)],
       [sg.ReadButton('Decode',font=('Helvetica',15), auto_size_button=True, bind_return_key=True), 
@@ -60,18 +59,28 @@ def decodeMailButton():
   while True:
     button, values = window.Read()
     if button == 'Decode':
-      if values[2] == True:
-        decodedContent = caesar.decrpyt(values[1], values[0])
-        layout2 = [
-        [sg.Multiline(decodedContent, size=(55,20), auto_size_text=True)],
-        [sg.Text('', size=(30,1)), sg.Button('Back')]]
-        window2 = sg.Window('Decoded message').Layout(layout2)
-        button2 = window2.Read()
+      if values[1] == True:
+        decodedContent = caesar.decrpyt(values[0])
+        window.Hide()
+        displayMessage(decodedContent)
     elif button == 'Home':
       window.Hide()
       home()
     else:
       sys.exit()
+
+def displayMessage(string):
+  layout = [
+        [sg.Multiline(string, size=(55,20), auto_size_text=True)],
+        [sg.Text(''), sg.Button('Back', auto_size_button=True)]]
+  window = sg.Window('Decoded message').Layout(layout)
+  while True:
+    button, values = window.Read()
+    if button == 'Back':
+      window.Hide()
+      decodeMailButton()
+    else:
+      break
 
 # Initial screen and home location
 def home():

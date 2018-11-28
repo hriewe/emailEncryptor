@@ -13,11 +13,12 @@ class caesar():
 
   # constructor for caesar cipher
   def __init__(self):
-    self.specialList = ['!', '?', '.', ',', '@', '#', '$', '%', '&', '*', '(', ')', '+', '=', '-', '/', '\'']
+    self.specialList = ['!', '?', '.', ',', '@', '#', '$', '%', '&', '*', '(', ')', '+', '=', '-', '/', '\'', '^',
+                        '_', '[', ']', '{', '}', '|', '\"', '<', '>']
 
   # Encrypt the users string and return the new one
   def encrypt(self, string):
-      self.shift = random.randint(5,100)
+      self.shift = random.randint(10,99)
       self.cipher = ''
       for char in string: 
           if char == ' ':
@@ -35,15 +36,21 @@ class caesar():
 
       self.cipher = self.cipher[::-1]
       self.cipher += ' '
-      self.cipher += str(self.shift)
+      self.charShift = str(self.shift)
+      self.encodedKey = ''
+      for char in self.charShift:
+        self.encodedKey = self.encodedKey + self.encryptNumber(char)
+      self.cipher += self.encodedKey
       return self.cipher
 
   # Decrypt the string based on the key
-  def decrpyt(self, string, key):
-      self.shift = int(key)
+  def decrpyt(self, string):
+      self.decodedKey = string[-2:]
+      self.message = string[:-3]
+      self.shift = self.decryptNumber(self.decodedKey)
       self.cipher = ''
-      self.string = string[::-1]
-      for char in self.string: 
+      self.message = self.message[::-1]
+      for char in self.message:
           if char == ' ':
               self.cipher = self.cipher + char
           elif char in self.specialList:
@@ -114,6 +121,31 @@ class caesar():
           return 'å'
       else:
           return 'ž'
+
+  def decryptNumber(self, string):
+      self.key = ''
+      for char in string:
+        if char == 'ß':
+            self.key = self.key + '0'
+        elif char == 'š':
+            self.key = self.key + '1'
+        elif char == 'œ':
+            self.key = self.key + '2'
+        elif char == 'ø':
+            self.key = self.key + '3'
+        elif char == 'ł':
+            self.key = self.key + '4'
+        elif char == 'ñ':
+            self.key = self.key + '5'
+        elif char == 'ÿ':
+            self.key = self.key + '6'
+        elif char == 'ę':
+            self.key = self.key + '7'
+        elif char == 'å':
+            self.key = self.key + '8'
+        elif char == 'ž':
+            self.key = self.key + '9'
+      return int(self.key)
 
   # Get encoded message and decrypt it based on key
   def CLIdecodeMail(self):
