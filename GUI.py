@@ -31,6 +31,7 @@ def sendMailButton():
   while True:
     button, values = window.Read()
     if button == 'Send':
+      # Determine if Caesar radio button is selected
       if values[5] == True:
         encryptedContent = caesar.encrypt(values[4])
         yag = yagmail.SMTP(values[0], values[1])
@@ -59,6 +60,7 @@ def decodeMailButton():
   while True:
     button, values = window.Read()
     if button == 'Decode':
+      # Determine if Caesar radio button is selected
       if values[1] == True:
         decodedContent = caesar.decrpyt(values[0])
         window.Hide()
@@ -69,10 +71,13 @@ def decodeMailButton():
     else:
       sys.exit()
 
+# This function will display the decoded message to the user after decrypting
 def displayMessage(string):
+  # Layout design
   layout = [
         [sg.Multiline(string, size=(55,20), auto_size_text=True)],
         [sg.Text(''), sg.Button('Back', auto_size_button=True)]]
+  # Show window to the user
   window = sg.Window('Decoded message').Layout(layout)
   while True:
     button, values = window.Read()
@@ -117,6 +122,6 @@ def home():
       sys.exit()
       break
 
-# Function call to start the program
+# Function call to create instance of classes and to start the program
 caesar = caesar()
 home()

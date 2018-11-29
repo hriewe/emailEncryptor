@@ -1,4 +1,4 @@
-# This is the first implementation of the GUI based emailEncryptor program
+# This is the second implementation of the GUI based emailEncryptor program
 # Written and designed by Hayden Riewe
 # hrcyber.tech
 # github.com/hriewe/
@@ -122,6 +122,7 @@ class caesar():
       else:
           return 'ž'
 
+  # This is used for getting the key out of the encrypted message
   def decryptNumber(self, string):
       self.key = ''
       for char in string:
@@ -147,7 +148,7 @@ class caesar():
             self.key = self.key + '9'
       return int(self.key)
 
-  # Get encoded message and decrypt it based on key
+  # Get encoded message and decrypt it based on key (Command Line)
   def CLIdecodeMail(self):
     key = input("Enter the key found at the end of your emailEncryptor message: ")
     content = input("Paste the email contents here: ")
@@ -163,7 +164,7 @@ class caesar():
       print("Goodybye!")
       sys.exit(0)
 
-  # Encrypt a message and send an email
+  # Encrypt a message and send an email (Command Line)
   def CLIsendMail(self):
     usrEmail = input("Great! What is your e-mail address? ")
     usrPass = getpass.getpass(prompt = "What is your password: ")
