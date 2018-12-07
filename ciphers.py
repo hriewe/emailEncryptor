@@ -2,6 +2,7 @@
 # Written and designed by Hayden Riewe
 # hrcyber.tech
 # github.com/hriewe/
+from steg import common, steg_img
 import yagmail
 import sys
 import getpass
@@ -184,3 +185,16 @@ class caesar():
     else:
       print("Goodybye!")
       sys.exit(0)
+
+class realSteg():
+
+
+  def __init__(self):
+    pass
+
+  def encrypt(self, message, image):
+    self.s = steg_img.IMG(payload_path=message, image_path=image)
+    self.s.hide()
+  def decrypt(self, image):
+    self.s_prime = steg_img.IMG(image_path=image)
+    self.s_prime.extract()
