@@ -118,9 +118,9 @@ def decodeMailButton():
         realSteg.decrypt(values[1])
         file = open('hidden_file.txt', 'r')
         decodedMessage = file.read()
+        os.remove('hidden_file.txt')
         window.Hide()
         displayMessage(decodedMessage)
-        os.remove('hidden_file.txt')
 
     elif button == 'Home':
       window.Hide()
