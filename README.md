@@ -1,4 +1,4 @@
-# emailEncryptor (v 1.7)
+# emailEncryptor (v 2.0)
 
 ![](img/home.PNG "Home Screen of program")
 
@@ -79,6 +79,13 @@ your specific version number when you run the program. For me, I have yagmail in
 
 `python3.6 emailEncryptor.py`
 
+## How to use Steganography in emailEncryptor
+
+emailEncryptor now comes with a second cipher that will allow you to hide your message inside the pixel data of an image.
+To use this cipher, select it inside the program and then when prompted select a png image to hide your message in. For ease
+of use a default png image is included "bird.png". You can use your own image if you'd like but make sure it is of PNG format.
+When recieving a steg image download it to your computer in the emailEncryptor folder and select it when decoding.
+
 ## Notes
 * This program is intended to be used by two people to send and decode encrypted messages. When using the program, you can
 send mail to anybody without them having to change any setting in their email accounts, but they will not be able to decode
@@ -88,8 +95,6 @@ the message without my program. Spread the word and try it out with your friends
 you do not feel safe, do not enter your information. (There is no practicle way around this, as yagmail needs to be
 able to access your account in order to send mail for you)
 
-* The program now supports encryption of numbers! The code for this is not pretty and I am working on cleaning it up, but for now it works.
-
 * Using my program? Let me know!! Send an encrypted email to hriewe13@gmail.com and I will get back to you! 
 
 * [Yagmail Documentation](https://media.readthedocs.org/pdf/yagmail/latest/yagmail.pdf)
@@ -97,13 +102,12 @@ able to access your account in order to send mail for you)
 * [PySimpleGUI Documentation](https://pysimplegui.readthedocs.io/)
 
 ## Coming Soon
-* Version 2 is in the works. The caesar cipher has been modified significantly and is now much more secure. Users will also be given the option to choose from 3 ciphers, including a new Vigenère and steg (image) encryptor.
 
 * Image support! (Distorting images to the point where no one can tell what they were, and then reversing that inside the program)
 
 ### Update Notes
-* The newest version of emailEncryptor is set up and ready for the new ciphers. Those will be out very soon. The code was also completely reformated and cleaned up. The caesar cipher now works much better.
-
-* emailEncryptor now runs with a user friendly GUI. The version here is optimized to run on a Mac machine, but it will work for any. If you find a bug with the program on your machine, please let me know so I can fix any problems.
+* Version 2 is here! The rotation cipher has been tremendously updated and is now much more secure. A new cipher has been added (Steganography) that allows you to hide your message in the pixel data of an image. The code has been restructured completely. Plus much more!
 
 * emailEncryptor now hides the key behind the same encryption as the rest of the messsage. The user simpily pastes in their message and the program will extract the key and decode accordingly.
+
+* emailEncryptor now runs with a user friendly GUI. The version here is optimized to run on a Mac machine, but it will work for any. If you find a bug with the program on your machine, please let me know so I can fix any problems.
