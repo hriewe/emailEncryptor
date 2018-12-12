@@ -2,6 +2,7 @@
 # Written and designed by Hayden Riewe
 # hrcyber.tech
 # github.com/hriewe/
+
 from steg import common, steg_img
 import yagmail
 import sys
