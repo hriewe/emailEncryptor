@@ -39,7 +39,7 @@ def sendMailButton():
             [sg.Text('Who to send this to?', size=(20,1)), sg.InputText()],
             [sg.Text('Subject (not encrypted)', size=(20,1)), sg.InputText()],
             [sg.Text('The body of your email', size=(20, 1)), sg.Multiline(size=(45,5), autoscroll=True, background_color='grey')],
-            [sg.Text('Select the image to hide body of email in (PNG)'), sg.InputText(), sg.FileBrowse()],
+            [sg.Text('Select image', size=(20,1)), sg.InputText(size=(35,1)), sg.FileBrowse()],
             [sg.Button('Send'), sg.Button('Home'), sg.Button('Exit')]]
   # Show the window to the user
   window = sg.Window('emailEncryptor').Layout(CaesarLayout)
