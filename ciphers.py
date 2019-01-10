@@ -199,3 +199,19 @@ class realSteg():
   def decrypt(self, image):
     self.s_prime = steg_img.IMG(image_path=image)
     self.s_prime.extract()
+
+class vigenere():
+
+	def __init__(self):
+		pass
+
+	def encrypt(self, key, message):
+
+		self.encrypted = ''
+
+		for char in message:
+			for keyChar in key:
+				if char.isaplha():
+					self.encrypted = self.encrypted + ((char + keyChar) % 26)
+		return self.encrypted
+        
