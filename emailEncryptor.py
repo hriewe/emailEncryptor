@@ -7,10 +7,10 @@ print("Writen by Hayden Riewe  \n")
 while True:
 	decision = input("Would you like to send, or decode mail? ")
 
-	if decision == "send" or decision == "Send":
+	if decision.lower() == "send":
 		caesar.CLIsendMail()
 		break
 
-	elif decision == "decode" or decision == "Decode":
+	elif decision.lower() == "decode":
 		caesar.CLIdecodeMail()
 		break
